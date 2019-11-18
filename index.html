@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<title>Paper Bridges NC<style id="jsbin-css">
+body {
+  background-color: white grey;
+}
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.google_input {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  outline: 0;
+  border: 1px solid #F1F3F4;
+  background: #F1F3F4;
+  transition: all 200ms;
+  width: 60%;
+  margin: 0.5rem 0.5rem;
+  margin-left: 0;
+  z-index: -1;
+}
+.google_input:focus {
+  background: #FFF;
+  box-shadow: 1px 3px 5px 1px #e1e1e1;
+  border-color: #F1F3F4;
+}
+.group {
+  display: block;
+}
+label {
+  width: fit-content;
+  margin: 0.5rem;
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: -3px;
+  margin-left: 16px;
+  font-family: Sans-Serif;
+  font-weight: 300;
+  z-index: 1;
+}
+label:hover {
+  cursor: pointer;
+}
+.formBtn {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  background: #F1F3F4;
+  border: 1px solid #F1F3F4;
+  color: #000;
+  margin: 1rem;
+  margin-left: 0;
+  transition: all 200ms;
+}
+.formBtn:hover {
+  cursor: pointer;
+  background: #abf2b0;
+  color: #000;
+  border-color: #abf2b0;
+  box-shadow: 1px 2px 5px 0px #e1e1e1;
+}
+.formBtn:focus {
+  outline: none;
+  background: #6add8f;
+  border: 1px solid #6add8f;
+}
+.iframe-container {
+  overflow: hidden;
+  // Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625)
+  padding-top: 56.25%;
+  position: relative;
+}
+ 
+.iframe iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
+</style>
+</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #7;
+  line-height: 1.5;
+  size: 50px;
+}
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/43021508_2029131000442093_8466504683681218560_n.jpg?_nc_cat=110&_nc_oc=AQnNtKIGeFXy-9hiBe4HR6gbq52fL-9ptAq9TU8ghP1461M9nmFiwLIB7WcGqkYmk_w-lPj5IFPEv5hG6hZh9-fO&_nc_ht=scontent-atl3-1.xx&oh=2cc543491bbe58b7ea92799e33f5a410&oe=5E47819F');
+  min-height: 100%;
+}
+/* Second image (About) */
+.bgimg-2 {
+  background-image: url("https://www.paper-bridges.org/uploads/1/2/0/3/120300805/img-3151.jpg");
+  min-height: 400px;
+}
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("https://cdn.pixabay.com/photo/2017/06/18/18/39/baby-2416718_960_720.jpg");
+  min-height: 400px;
+}
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+</style>
+<body>
+  
+  <!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#helpus" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> HELP US</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    
+   </div>
+</div>
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#helpus" class="w3-bar-item w3-button" onclick="toggleFunction()">HELP US</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle w3-padding-large" style="white-space:wrap;">
+    <p id="demo"></p>
+  <div><button class="w3-margin w3-xlarge w3-transparent"onclick="typeWriter()"><font color="white"><font size="50 px"<h1>Paper Bridges Project, NC</h1></font></button></div>
+<script>
+var i = 0;
+var txt = 'A small change can make a difference';
+var speed = 50;
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+
+   
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <font color="black">
+  <h1 class="w3-center">ABOUT US</h1>
+  <h3 class="w3-center"><em>Paper Bridges</em></h3>
+  <h4> Studies estimate that 140 million children are neglected globally. We believe that communication is the cornerstone of all human relationships, and it is one of many important factors to child development that is lacked for neglected children. Although nothing can replace the critical role parental love constitutes in a child’s life, we aim to be that bridge of empathy and love.</h4>
+  <h4>We are the Paper Bridges Project at North Carolina. Paper Bridges Corp is a 501(c)(3) nonprofit organization based in the United States, which qualifies us to give out volunteering hours. Together, we write and deliver letters to orphans around the world. Our team hopes to construct a bridge to the hearts of children in orphanages of strength, encouragement, and consolation; all done in the hopes that one day, they will be able to construct magnificent bridges of their own.</h4>
+  
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large"></div></div>
+  <h2 class="w3-xxlarge w3-center"> <b>Help us!</b></h2>
+      
+    
+    <p class="w3-wide"><i class="fa fa-laptop"></i>Online Nonprofit</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%">100%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-file-text"></i> Letters Goal</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:10%">10%</div>
+  </div>
+</div>
+
+<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">14+</span><br>
+    Orphanage Partners
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">55+</span><br>
+    Letters 
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">140</span><br>
+    Million Orphans
+  </div>
+   <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">10+</span><br>
+    Countries
+  </div></div>
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+  
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64"id="helpus">
+  <h1 class="w3-center">How You Can Help</h1>
+  <h4 class="w3-center"><em>"Some time ago one woman came with her child to me and said, 'Mother, I went to two, three places to beg some food, for we have not eaten for three days but they told me that I am young and I must work and eat. No one gave me anything.' I went to get some food and by the time I returned the baby in her hand had died of hunger. I hope it was not our convents that refused her."</em>
+    <br><br>Mother Teresa, <em>A Call To Mercy</em></h4><br>
+ <BR> <h2><center>No child should feel that they are abandoned or unloved.</h2><br><BR>
+   <h3>Write Letters</h3>
+ <h4> Help us write letters to orphans around the world in orphanages like Orphan's Hope, CASA Guatemala, and Our Little Roses. Submit it in the form below that direct to our project's email. We will proofread and word check it for you. Be encouraging! Let the orphans know that you are looking out for them. Each letter should be from 100 to 500 words. A few suggestions: </h4>
+<p>Tell them a little about yourself: Where are you from? What are some of your hobbies? What do you do on a typical day?</p>
+<p>Talk about topics that they can relate to such as (but not limited to) school, sports, friends, and art.</p><br>
+<h4> Still not sure what to write? Here are some <a href="https://www.paper-bridges.org/sample-letters.html"<p>examples</h4></a><br>
+   <h3>Donations</h3>
+   <h4>Please donate to us through <a href="https://www.globalgiving.org/projects/sending-letters-to-orphans-worldwide/#menu"<p>Global Giving Campaign.</a> Even a small change can make a difference.</h4>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  
+ <h2 class="w3-center"> <a href="https://www.paper-bridges.org/" class="w3-hover-text-green"> PAPER BRIDGES Website</a></h2>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/47013649_581863245578220_4993478872688230400_n.png?_nc_cat=104&_nc_oc=AQmp3ntFuk_gBccwIXdlOA_x4cPDmnBTrP8UAmt8UUxhidv_41GkiUUcJOr0JjvxUmI&_nc_ht=scontent-iad3-1.xx&oh=03a80aa66904b652c30e23d34b21088c&oe=5E1A4595" class="w3-image w3-round" style="width:100%">
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> North Carolina, US<br>
+        
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>paperbridgesnc@gmail.com<br>
+      </div>
+      <h5> Ask us any questions or leave us a letter. The letter can be in any language, and we would be happy to translate the letter into English if you would like.<p><bold>Please try to keep the <mark>language relatively simple</mark> and make the message between <mark>100-500 words.</mark> Our team will handwrite and personalize each letter for the orphans.</bold></p>
+<p>If you would like to handwrite a letter and include a photo, please email a scanned copy of the letter to <i>letters@paper-bridges.org. </i>For any questions about our chapter, please email Huong Nguyen at<i> mhuong1703@gmail.com</i></p></h5></div><br><br>
+   <center> <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeBtlLGTdHrbGYLWVq9Thdq-NBmNE6gojxZ1eqw_T8J7a3wYg/viewform?embedded=true" width="570" height="992" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></center>
+    
+
+   
+
+</script>
+</div>
+ <br><br>
+  
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"><a href="https://www.facebook.com/paperbridges.us" target="_blank"> Facebook</a></i>
+    <i class="fa fa-instagram w3-hover-opacity"><a href="https://www.instagram.com/paper.bridges/" target="_blank"> Instagram</a></i>
+    
+  </div>
+  <p><small>  <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css tutorials</a><space></space>  &#169;2019 Copyrighted Huong Nguyen</small></p>
+    
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+
+
+<script id="jsbin-source-css" type="text/css">body {
+  background-color: white grey;
+}
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.google_input {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  outline: 0;
+  border: 1px solid #F1F3F4;
+  background: #F1F3F4;
+  transition: all 200ms;
+  width: 60%;
+  margin: 0.5rem 0.5rem;
+  margin-left: 0;
+  z-index: -1;
+}
+.google_input:focus {
+  background: #FFF;
+  box-shadow: 1px 3px 5px 1px #e1e1e1;
+  border-color: #F1F3F4;
+}
+.group {
+  display: block;
+}
+label {
+  width: fit-content;
+  margin: 0.5rem;
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: -3px;
+  margin-left: 16px;
+  font-family: Sans-Serif;
+  font-weight: 300;
+  z-index: 1;
+}
+label:hover {
+  cursor: pointer;
+}
+.formBtn {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  background: #F1F3F4;
+  border: 1px solid #F1F3F4;
+  color: #000;
+  margin: 1rem;
+  margin-left: 0;
+  transition: all 200ms;
+}
+.formBtn:hover {
+  cursor: pointer;
+  background: #abf2b0;
+  color: #000;
+  border-color: #abf2b0;
+  box-shadow: 1px 2px 5px 0px #e1e1e1;
+}
+.formBtn:focus {
+  outline: none;
+  background: #6add8f;
+  border: 1px solid #6add8f;
+}
+.iframe-container {
+  overflow: hidden;
+  // Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625)
+  padding-top: 56.25%;
+  position: relative;
+}
+ 
+.iframe iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}</script>
+</body>
+</html>
+
+© 2019 GitHub, Inc.
