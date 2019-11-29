@@ -2,14 +2,9 @@
 <html>
 <title>Paper Bridges NC<style id="jsbin-css">
 body {
-  background-color: white grey;
+   background: white-grey;
 }
-.container {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-}
+
 .letters-container {
     background-color: #004466;
 }
@@ -86,6 +81,20 @@ label:hover {
    top: 0;
    width: 100%;
 }
+  .header-logo {
+  align-self: center;
+  margin-left: 2rem;
+}
+#logo {
+  transition: all 0.5s ease-out;
+}
+
+#logo:hover {
+  transform: perspective(400px) translate3d(-10px, 0px, -10px) scale(0.93);
+}
+.header-letter {
+  font-size: 30px;
+  color: #6a4a39;
 </style>
 </title>
 <meta charset="UTF-8">
@@ -111,7 +120,7 @@ body, html {
 /* First image (Logo. Full height) */
 .bgimg-1 {
   background-image: url('https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/s960x960/74357339_103038844511154_7958745644129058816_o.jpg?_nc_cat=105&_nc_ohc=MrOsxx8WVN8AQkrXCy-Ve_-XR2BctYpTelXgsL8_JyRP7-NV1QPCZpRbg&_nc_ht=scontent-atl3-1.xx&oh=f7a5d8e640a91563e6f9e26ea5a0e1d4&oe=5E4241AE');
-  min-height: 10%;
+  min-height: 200%;
 }
 /* Second image (About) */
 .bgimg-2 {
@@ -135,11 +144,16 @@ body, html {
 </style>
 <body>
   
+  <!--Logo Airplane -->
+  <div class="header-logo">
+            <svg id="logo" width="150" height="42" viewBox="0 0 41 22" fill="none">
+                <path d="M33.7857 18.6786C33.739 18.6552 33.6903 18.6252 33.6399 18.5889C31.7025 17.4062 27.6816 15.275 25.9746 15.5536C24.9235 17.4362 23.9189 19.5535 23.2857 21C18.4456 18.9651 7.21239 12.1163 1 1L39.268 6.25659C39.5365 6.25356 39.7837 6.28434 40 6.35714L39.268 6.25659C37.6925 6.27436 35.3842 7.45629 34.2857 8.14286C35.2571 10.2857 34.3571 16.0595 33.7857 18.6786Z" fill="#e0ffff" />
+                <path d="M1 1L40 6.35714C38.5143 5.85714 35.5714 7.33929 34.2857 8.14286M1 1L29.3571 11.3571M1 1L34.2857 8.14286M1 1C7.21239 12.1163 18.4456 18.9651 23.2857 21C23.9189 19.5535 24.9235 17.4362 25.9746 15.5536M29.3571 11.3571C30.3571 13.5595 32.6429 18.1071 33.7857 18.6786M29.3571 11.3571C28.5217 11.4345 27.2158 13.3304 25.9746 15.5536M33.7857 18.6786C34.3571 16.0595 35.2571 10.2857 34.2857 8.14286M33.7857 18.6786C31.9116 17.5179 27.7257 15.2679 25.9746 15.5536" stroke="#FF8989"></svg>
   <!-- Navbar (sit on top) -->
-<right><div class="w3-top">
+<div class="w3-top">
   <div class="w3-bar" id="myNavbar">
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
+      <i class="fa fa-bars"/></i>
     </a>
     <a href="#home" class="w3-bar-item w3-button">HOME</a>
     <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
@@ -165,7 +179,7 @@ body, html {
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle w3-padding-large" style="black-space:wrap;">
     <p id="demo"></p>
-  <div><button class="w3-margin w3-xlarge w3-white-smoke w3-transparent"onclick="typeWriter()"><font color="white"><font size="50 px"<h1><em><mark><b> Paper Bridges, NC</b></em></mark></h1></font></button></div>
+  <div><button class="w3-margin w3-xlarge w3-light-grey w3-block w3-stretch w3-animate-opacity w3-btn w3-ripple"onclick="typeWriter()"><font color="black"><font size="9000 px"><h1 class=" w3-xxxlarge w3-center w3-helvetica"> PAPER BRIDGES, NC</h1></font></button></div>
 <script>
 var i = 0;
 var txt = 'A small act of kindness can make a difference';
@@ -186,92 +200,72 @@ function typeWriter() {
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
   <font color="black">
-    <h1 class="w3-center"><b>ABOUT US</b></h1>
+    <h1 class="w3-center w3-wide"><b>About Us</b></h1>
   <h3 class="w3-center"><em>Paper Bridges</em></h3>
     <center><img src="https://www.paper-bridges.org/uploads/1/2/0/3/120300805/edited/amcharts.png?1551650854"style="width:92%"style="length:100%"></center><br>
-  <h4>We are the Paper Bridges Project at North Carolina. Paper Bridges Corp is a 501(c)(3) nonprofit organization that encourage students to write letters to orphanages around the world. We have reached 12 countries, and are continue to make a difference one letter at a time. We welcome and accept new members! We are gaining, with partnerships with clubs like National Art Honor Society. We offer service hours to members for writing 100-500 words per letter. If you need us to have any questions about volunteering hours, please submit a response form to us. </h4><h2 class="w3-center"><br><b>Thank You</b></h>
-    <h4> Below is an official list to tribute to our team. We welcome all to volunteer for our club, but only official members are qualified for a certificate of 20 hours service.<b> Members are mandatory to write one letter weekly. If you would like to join us, please see an officer or submit a response form below.</b> We are looking forward to work with you!</h4><br>
-    <!---Table--->
-<b><center><table style="width:82%">
-  <tr>
-    <th>First Name</th>
-    <th>Last Name </th>
-    <th>Join Date</th>
-  </tr>
-  <tr>
-    <td>Grace</td>
-    <td>S.</td>
-    <td>11/02/19</td>
-  </tr>
-  <tr>
-    <td>Savannah</td>
-    <td>D.</td>
-    <td>11/02/19</td>
-  </tr>
-   <tr>
-    <td>Trinh</td>
-    <td>N.</td>
-    <td>11/02/19</td>
-  </tr>
-   <tr>
-    <td>Chau</td>
-    <td>P.</td>
-    <td>11/02/19</td>
-  </tr>
-   <tr>
-    <td>Lily</td>
-    <td>N.</td>
-    <td>11/21/19</td>
-  </tr>
-   <tr>
-    <td>Janelle</td>
-    <td>B.</td>
-    <td>11/02/19</td>
-  </tr>
-   <tr>
-    <td>Ben(Vy)</td>
-    <td>V.</td>
-    <td>11/02/19</td>
-  </tr>
-   <tr>
-    <td>Tram</td>
-    <td>C.</td>
-    <td>11/02/19</td>
-  </tr>
-   <tr>
-    <td>Vy</td>
-    <td>N.</td>
-    <td>11/21/19</td>
-  </tr>
-  <tr>
-    <td>Vi</td>
-    <td>V.</td>
-    <td>11/21/19</td>
-  </tr>
-   <tr>
-    <td>Anna</td>
-    <td>P.</td>
-    <td>11/22/19</td>
-  </tr>
-   <tr>
-    <td>Grace</td>
-    <td>B.</td>
-    <td>11/22/19</td>
-  </tr>
-   <tr>
-    <td>Arman</td>
-    <td>M.</td>
-    <td>11/22/19</td>
-  </tr><style>
-table, th, td {
-  border: 1px solid black;
+  <h4>We are the Paper Bridges Project at North Carolina. Paper Bridges Corp is a 501(c)(3) nonprofit organization based in Maryland that encourage students to write letters to orphanages around the world. We were established in 2017 to support orphans around the world. We strive to provide hope for children in orphanages internationally by writing letters to kids, as well as sending them small gifts to remind them that there are people who care about them. Our letters are written by people of all age groups and walks of life, each full of love and encouragement. We have reached 12 countries, and are continue to make a difference one letter at a time.</h4>
+    <h4>Although nothing can replace the critical role parental love constitutes in a child’s life, we can still hope to ease an orphan’s journey by providing encouragement and support. Our members partner and work with with churches, schools, and local communities like the Vietnamese American Association at Raleigh. We welcome all to volunteer for our club, but only official members are eligible to receive certificates and attend missionary trips. We offer service hours to members for writing 100-500 words per letter. If you would like to partner up or have any questions regarding our organization, please submit a response form to us. </h4></center><br><br>
+    <!---Help Span--->
+  <div class="w3-content w3-container w3-padding-64">
+  <font color="black">
+  <form action="action_page.php">
+  <div class="container">
+    <h2 class="w3-center"><b>SUBSCRIBE TO OUR NEWSLETTER</b></h2>
+    <h4>For updates on future spotlights and other news, simply enter your email below :</h4>
+  </div>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+form {
+  border: 3px solid #ccc;
+  font-family: Arial;
 }
-  
+
+.container {
+  padding: 20px;
+  background-color:#c4ffe2;
+}
+
+input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=checkbox] {
+  margin-top: 16px;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
 </style>
-  </b></table></center> <div class="w3-row">
+  <div class="container" style="background-color:white">
+    <input type="text" placeholder="Name" name="name" required>
+    <input type="text" placeholder="Email address" name="mail" required>
+    <label>
+      <input type="checkbox" checked="checked" name="subscribe"> I agree to receiving marketing and promotional materials
+    </label>
+  </div>
+
+  <div class="container">
+    <input type="submit" value="Subscribe">
+  </div>
+</form>
+<BR><br><br><br>
+        
+   <div class="w3-row">
     <center><div class="w3-col m6 w3-center w3-padding-large"></div></div>
-<br><br><br><br><br><h2 class="w3-xxlarge w3-center"> <b>Help us!</b></h2>
-      
+<br><h2 class="w3-xxlarge w3-center w3-wide"> <b>Help us!</b></h2>
     
     <p class="w3-wide"><i class="fa fa-laptop"></i>Made with Love!</p>
   <div class="w3-black">
@@ -280,7 +274,7 @@ table, th, td {
   <p class="w3-wide"><i class="fa fa-file-text"></i> Letters Goal</p>
   <div class="w3-light-grey">
     <div class="w3-container w3-padding-small w3-center w3-pale-green" style="width:65%">65%</div>
-  </div>
+  </div><br>
 </div>
 
 <div class="w3-row w3-center w3-blue-grey w3-padding-16">
@@ -309,10 +303,10 @@ table, th, td {
 
 <!-- Container (Help Section) -->
 <div class="w3-content w3-container w3-padding-64"id="helpus">
-  <h1 class="w3-center"><b>How You Can Help</b></h1>
+  <h1 class="w3-center w3-wide"><b>How You Can Help</b></h1>
   <h4 class="w3-center"><em>“Not all of us can do great things. But we can do small things with great love.”</em>
     <br><br>Mother Teresa</h4><br>
-  <BR> <h2><center><b>A small act of kindness can make a difference.</b></h2><br><BR>
+  <BR> <h2><center><b><mark>Just five minutes of your time can show an orphan that they are loved and cared for.</b></h2><br><BR></mark>
     <h3><b>Write Letters</b></h3>
  <h4> Help us write letters to orphans around the world in orphanages like Orphan's Hope, CASA Guatemala, and Our Little Roses. We will proofread and word check it for you. Be encouraging! Let the orphans know that you are looking out for them. Each letter should be from 100 to 500 words. A few suggestions: </h4>
 <p>Get them to know you: Where are you from? Share your hobbies or daily activities</p>
@@ -367,7 +361,7 @@ table, th, td {
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64" id="contact">
   
- <h2 class="w3-center"> <a href="https://www.paper-bridges.org/" class="w3-hover-text-green"> <b>PAPER BRIDGES Website</b></a></h2>
+ <h2 class="w3-center"> <a href="https://www.paper-bridges.org/" class="w3-hover-text-green"> <b>PAPER BRIDGES, MD</b></a></h2>
 
   <div class="w3-row w3-padding-32 w3-section">
     <div class="w3-col m4 w3-container">
@@ -380,9 +374,9 @@ table, th, td {
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>paperbridgesnc@gmail.com<br>
       </div>
       <h4> Ask us any questions or leave us a letter. The letter can be in any language.<p><bold>Please try to keep the <mark>language relatively simple</mark> and make the message between <mark>100-500 words.</mark> We will submit the letters to our nonprofit in Maryland.</bold></h4>
-<p>If you would like to handwrite a letter and include a photo, please email a scanned copy of the letter to <i>letters@paper-bridges.org. </i>For any questions, please email <i> paperbridgesnc@gmail.com</i> or see any of our officers. 
-      </p></h5><h4>Outreach Coordinator: Ben(Vy V.)<br> President: Huong<br> Secretary: Lily<br> Vice President:<br></h4></div><br><br>
-   <center> <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeBtlLGTdHrbGYLWVq9Thdq-NBmNE6gojxZ1eqw_T8J7a3wYg/viewform?embedded=true" width="570" height="992" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></center>
+<p>If you would like to handwrite a letter and include a photo, please email a scanned copy of the letter to <i>letters@paper-bridges.org. </i>For any questions, please email <i> paperbridgesnc@gmail.com</i> or see any of our officers. <br>
+  <center> <iframe class="w3-center" src="https://docs.google.com/forms/d/e/1FAIpQLSeBtlLGTdHrbGYLWVq9Thdq-NBmNE6gojxZ1eqw_T8J7a3wYg/viewform?embedded=true" width="570" height="992" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></center>
+  </div><br><br>
     
 
    
@@ -400,7 +394,7 @@ table, th, td {
     <i class="fa fa-instagram w3-hover-opacity"><a href="https://www.instagram.com/paper.bridges/" target="_blank"> Instagram</a></i>
     
   </div>
-  <p><space></space>  &#169;2019 Copyrighted Huong Nguyen </small></p>
+  <p><space></space><small>  &#169;2019 Copyrighted PaperBridges NC</small></p>
     
 </footer>
  
