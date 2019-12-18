@@ -581,32 +581,46 @@ html {
   </div>
 </div>
 <!--Hey! This is the original version
-of Simple CSS Waves-->
+of Simple CSS Wavesslideshow-->
 
-<div class="header">
+<head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+</head>
 
-<!--Content before waves-->
-<div class="inner-header flex">
-<!--Just the logo.. Don't mind this-->
-  <h1><center><b>PAPER BRIDGES, NC</b></center></h1>
+<body>
+
+
+
+<div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="img_la.jpg" style="width:100%">
+  <img class="mySlides" src="img_ny.jpg" style="width:100%">
+  <img class="mySlides" src="img_chicago.jpg" style="width:100%">
 </div>
 
-<!--Waves Container-->
-<div>
-<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-<defs>
-<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-</defs>
-<g class="parallax">
-<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-</g>
-</svg>
-</div>
-<!--Waves end-->
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
 
 </div>
 <!--Header ends-->
