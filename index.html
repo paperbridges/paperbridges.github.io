@@ -580,31 +580,32 @@ html {
     
   </div>
 </div>
-<!--Hey! This is the original version
-of Simple CSS Wavesslideshow-->
+<!--Hey! This is the slideshow-->
 
-<head>
-<title>W3.CSS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
-.mySlides {display:none;}
-</style>
-</head>
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
 
-<body>
-
-
-
-<div class="w3-content w3-section" style="max-width:500px">
-    <img class="mySlides" src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/p720x720/79951928_118241009657604_5466476349617078272_o.jpg?_nc_cat=110&_nc_ohc=EcQLA24LQk8AQkfOzhfStiCqaRG8_dD505swNzbc3anYhUsIrWtHnrUHg&_nc_ht=scontent-atl3-1.xx&oh=523db6b6ccfe30d39279c859927c5f8e&oe=5E74B31B" style="width:100%">
-    <img class="mySlides" src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/s960x960/74357339_103038844511154_7958745644129058816_o.jpg?_nc_cat=105&_nc_ohc=EhDQeM75gboAQn4vsfLF__mMvLrRK81m222PTDGJmo7CXtDF986_95DYw&_nc_ht=scontent-atl3-1.xx&oh=629c64f1dbfbec6ad77e41bfdd824147&oe=5E4241AE" style="width:100%">
-  <img class="mySlides" src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/43021508_2029131000442093_8466504683681218560_n.jpg?_nc_cat=110&_nc_ohc=EMSv45jYm2gAQmMGJbb-wOUiROutARfpx8JBfnfu1n4qGqvDs30j4gw7Q&_nc_ht=scontent-atl3-1.xx&oh=169ad643aa975a51a31a2c1c4796c6d5&oe=5E47819F" style="width:100%">
-  <img class="mySlides" src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/79427210_118240886324283_6352910719943442432_n.jpg?_nc_cat=103&_nc_ohc=MHlpFQGoslgAQmp5s856HKoxzse6YbROSEQr4ApZwdE45fUpt9Row0hSw&_nc_ht=scontent-atl3-1.xx&oh=33f6b107dd385c9e4c789bb2f1323067&oe=5E7EC7DF" style="width:100%">
-</div>
-
+<!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/43021508_2029131000442093_8466504683681218560_n.jpg?_nc_cat=110&_nc_ohc=EMSv45jYm2gAQmMGJbb-wOUiROutARfpx8JBfnfu1n4qGqvDs30j4gw7Q&_nc_ht=scontent-atl3-1.xx&oh=169ad643aa975a51a31a2c1c4796c6d5&oe=5E47819F" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+        
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/79427210_118240886324283_6352910719943442432_n.jpg?_nc_cat=103&_nc_ohc=MHlpFQGoslgAQmp5s856HKoxzse6YbROSEQr4ApZwdE45fUpt9Row0hSw&_nc_ht=scontent-atl3-1.xx&oh=33f6b107dd385c9e4c789bb2f1323067&oe=5E7EC7DF" style="width:100%">
+    <div class="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-0/p206x206/79951928_118241009657604_5466476349617078272_o.jpg?_nc_cat=110&_nc_ohc=EcQLA24LQk8AQkfOzhfStiCqaRG8_dD505swNzbc3anYhUsIrWtHnrUHg&_nc_ht=scontent-atl3-1.xx&oh=e3e071f6fe8ebc56a51d1198c5568c78&oe=5E7D6D79">
+         
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/p720x720/79951928_118241009657604_5466476349617078272_o.jpg?_nc_cat=110&_nc_ohc=EcQLA24LQk8AQkfOzhfStiCqaRG8_dD505swNzbc3anYhUsIrWtHnrUHg&_nc_ht=scontent-atl3-1.xx&oh=523db6b6ccfe30d39279c859927c5f8e&oe=5E74B31B" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+         
+    </div>
+  </div>
 <script>
+// Automatic Slideshow - change image every 4 seconds
 var myIndex = 0;
 carousel();
 
@@ -617,13 +618,27 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 2000); // Change image every 2 seconds
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
 </script>
-
-</body>
-
-</div>
 <!--Header ends-->
 
 <!--Content starts-->
