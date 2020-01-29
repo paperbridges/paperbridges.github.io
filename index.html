@@ -589,7 +589,7 @@ html {
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
 <!-- Automatic Slideshow Images -->
-<div class="w3-content w3-section" style="max-width:500px">
+<div class="w3-content w3-section" style="max-width:100%">
   <img class="mySlides" src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/p720x720/80060617_118240779657627_2751961270839148544_o.jpg?_nc_cat=100&_nc_ohc=7TOFWikJCDAAX-STIp6&_nc_ht=scontent-atl3-1.xx&_nc_tp=6&oh=025c987d45d31b42a895e83e6bb16916&oe=5ECB748B" style="width:100%">
   <img class="mySlides" src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-0/p206x206/79951928_118241009657604_5466476349617078272_o.jpg?_nc_cat=110&_nc_ohc=JWs4zVieeBgAX92N4I4&_nc_ht=scontent-atl3-1.xx&_nc_tp=6&oh=7adb818aa8c32d054dced53145b5cbda&oe=5ECC8779" style="width:100%">
     <img class="mySlides" src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/s960x960/83707106_134975897984115_1659711724091080704_o.jpg?_nc_cat=101&_nc_ohc=VFzZAhBtP7wAX-IfRqS&_nc_ht=scontent-atl3-1.xx&oh=4c766e9e38d7fba8dc21779f1d3dbc43&oe=5EC9ED0D" style="width:100%">
@@ -597,10 +597,9 @@ html {
 </div>
 
 <script>
-<script>
-// Automatic Slideshow - change image every 4 seconds
 var myIndex = 0;
 carousel();
+
 function carousel() {
   var i;
   var x = document.getElementsByClassName("mySlides");
@@ -610,25 +609,12 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);    
-}
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-// When the user clicks anywhere outside of the modal, close it
-var modal = document.getElementById('ticketModal');
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+  setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 </script>
+
+</body>
+</html>
 <!--Header ends-->
 
 <!--Content starts-->
