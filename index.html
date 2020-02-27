@@ -635,21 +635,52 @@ function carousel() {
  <h4> We are the Paper Bridges Chapter at North Carolina. Paper Bridges Corp is a 501(c)(3) nonprofit organization based in Maryland that encourage students to write letters to orphanages around the world. We were established in 2017 to support orphans around the world. We strive to provide hope for children in orphanages internationally by writing letters to kids, as well as sending them small gifts to remind them that there are people who care about them. Our letters are written by people of all age groups and walks of life, each full of love and encouragement. We have reached 14 countries, and are continue to make a difference one letter at a time.</h4>
     <h4> Although nothing can replace the critical role parental love constitutes in a child’s life, we can still hope to ease an orphan’s journey by providing encouragement and support. Our members partner and work with school clubs, orphanages, and communities. This year, we aim to expand our networks by partnering with Vietnamese orphanages like the Vinh-Son orphanage. We welcome all to volunteer for our club, but only official members are eligible to receive certificates. We offer service hours to members for writing 100-500 words per letter. If you would like to partner up or have any questions regarding our organization, please submit a response form to us. </h4>
 <!-- Icon Section -->
-<div class="w3-container" style="padding:128px 16px" id="about">
-html {
-  scroll-behavior: smooth;
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
 }
 
-#section1 {
-  height: 600px;
-  background-color: pink;
+.container img {
+  width: 100%;
+  height: auto;
 }
-<h1>Smooth Scroll</h1>
 
-<div class="main" id="section1">
-  <h2>$135 Raised</h2>
-  <a href="#work">Thanks for your generosity! Check out our works below</a>
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color: black;
+}
+</style>
+</head>
+<body>
+
+<h2>$135 Donated</h2>
+<div class="container">
+  <img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/s960x960/87332187_972139359850367_2639186192834232320_o.jpg?_nc_cat=105&_nc_sid=8024bb&_nc_ohc=1pEdGfWo2ewAX-ZFQ6H&_nc_ht=scontent-atl3-1.xx&_nc_tp=7&oh=6672de5d82c1a31a943043c6488b73f2&oe=5EF48AF5" alt="PB" style="width:100%">
+  <button class="btn">Thank </button>
 </div>
+
+</body>
 
    <!-- Work Row -->
 <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
