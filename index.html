@@ -219,169 +219,50 @@ $(".btn").on("click",function(){
     <h3>A group of high school students coming together to make the world a better place. We write letters to orphans around the world to support kids on their journey, in hope that they will form bridges of their own.</h3>
      <p><a href="https://paperbridges.github.io/about/" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-on">More About Us</a></p></div></div></div>
 <!--Announcement -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<html>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bootstrap Thumbnail Carousel with Content</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Varela+Round">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<style type="text/css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
 
-.col-center {
-	margin: 0 auto;
-	float: none !important;
-}
-.carousel {
-	margin: 30px auto 60px;
-	padding: 0 80px;
-}
-.carousel .item {
-    text-align: center;
-	overflow: hidden;
-}
-.carousel .item h4 {
-	font-family: 'Varela Round', sans-serif;
-}
-.carousel .item img {
-	max-width: 100%;
-	display: inline-block;
-}
-.carousel .item .btn {
-	border-radius: 0;
-	font-size: 12px;
-	text-transform: uppercase;
-	font-weight: bold;
-	border: none;
-	background: #a177ff;
-	padding: 6px 15px;
-	margin-top: 5px;
-}
-.carousel .item .btn:hover {
-	background: #8c5bff;
-}
-.carousel .item .btn i {
-	font-size: 14px;
-    font-weight: bold;
-    margin-left: 5px;
-}
-.carousel .thumb-wrapper {
-	margin: 5px;
-	text-align: left;
-    background: #fff;
-    box-shadow: 0px 2px 2px rgba(0,0,0,0.1);   
-}
-.carousel .thumb-content {
-	padding: 15px;
-	font-size: 13px;
-}
-.carousel .carousel-control {
-	height: 44px;
-	width: 44px;
-	background: none;	
-    margin: auto 0;
-    border-radius: 50%;
-    border: 3px solid rgba(0, 0, 0, 0.8);
-}
-.carousel .carousel-control i {
-    font-size: 36px;
-    position: absolute;
-    top: 50%;
-    display: inline-block;
-    margin: -19px 0 0 0;
-    z-index: 5;
-    left: 0;
-    right: 0;
-    color: rgba(0, 0, 0, 0.8);
-	text-shadow: none;
-    font-weight: bold;
-}
-.carousel .carousel-control.left i {
-	margin-left: -3px;
-}
-.carousel .carousel-control.right i {
-	margin-right: -3px;
-}
-.carousel .carousel-indicators {
-	bottom: -50px;
-}
-.carousel-indicators li, .carousel-indicators li.active {
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	margin: 4px;
-	border-color: transparent;
-}
-.carousel-indicators li {	
-	background: #ababab;
-}
-.carousel-indicators li.active {	
-	background: #555;
-}
-</style>
-</head>
-<body>
-<div class="container">
-	<div class="row">
-		<div class="col-md-10 col-center m-auto">
-			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
-			<!-- Carousel indicators -->
-			<ol class="carousel-indicators">
-				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				<li data-target="#myCarousel" data-slide-to="1"></li>
-				<li data-target="#myCarousel" data-slide-to="2"></li>
-			</ol>   
-			<!-- Wrapper for carousel items -->
-			<div class="carousel-inner">
-				<div class="item carousel-item active">
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="thumb-wrapper">
-								<div class="img-box">
-									<img src="https://cdn0.iconfinder.com/data/icons/free-daily-icon-set/512/Dollar-512.png" class="img-responsive img-fluid" alt="">
-								</div>
-								<div class="thumb-content">
-									<h4>$185</h4>
-									<p>Donated</p>
-								</div>						
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="thumb-wrapper">
-								<div class="img-box">
-									<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTFet7ZnUEhOyrg5r3umhcJgnZcF-bFG1xXuinwApetMR5eM7pJ&usqp=CAU" class="img-responsive img-fluid" alt="">
-								</div>
-								<div class="thumb-content">
-									<h4>115</h4>
-									<p>Letters</p>
-								</div>						
-							</div>
-						</div>				
-						<div class="col-sm-4">
-							<div class="thumb-wrapper">
-								<div class="img-box">
-									<img src="https://image.flaticon.com/icons/png/512/33/33308.png" class="img-responsive img-fluid" alt="">
-								</div>
-								<div class="thumb-content">
-									<h4>13</h4>
-									<a href="https://docs.google.com/document/d/1HDa10TftucQDadbVV0ojDKmrfVGj7qsHm082H6lGflQ/edit?usp=sharing"><p>Supporters</p></a>
-								</div>						
-							</div>					
-						</div>
-					</div>
-				</div>
-				
-		</div>
-		</div>
-	</div>
+<div class="w3-quarter">
+		<h1 class="page-title">Impact</h1>
+</div><br><br><br>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+ 
+  <div class="w3-container w3-pale-blue #	">
+    <center> <h2>$135</h2></center>
+    <h4><center>Letters written</h4></center>
+
+  </div>
+  </div>
 </div>
-</body>
-</html>                                		                        	
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  
+  <div class="w3-container w3-pale-yellow	#ffb366">
+    <center><h2>Project Statement</h2>
+  <h4>Must Read</h4></center>
+    <p><center><a href="https://docs.google.com/document/d/1mFx2-GTSws_blyEldWkqldT-nyEuaV_3Y-hzSN0j8X0/edit?usp=sharing">Our model</a></center></p>
+ 
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  
+  <div class="w3-container">
+    <center><h2>For Parnters</h2>
+  <h4>Make a difference!</h4></center>
+     <p><center><a href="https://drive.google.com/drive/u/1/folders/1gRMWQYfrer2F6aSMDVl6ogtZxCbB-ELf">Resources</a></center></p>
+  
+  </div>
+  </div>
+    </div></div></div><br><br><br><br>                        	
 <!--end impact-->
 <!--faq-->
 <!DOCTYPE html>
