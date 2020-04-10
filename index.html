@@ -220,6 +220,160 @@ $(".btn").on("click",function(){
      <p><a href="https://paperbridges.github.io/about/" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-on">More About Us</a></p></div></div></div>
 
 <!--Announcement -->
+<!--Announcement -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>General FAQ</title>
+<link href="https://fonts.googleapis.com/css" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+	body {
+      margin: 0;
+  padding: 0;
+  background: #ffeae8;
+  font-family: "Montserrat";
+	}
+	.accordion .card {
+		background: none;
+		border: none;
+	}
+	.accordion .card .card-header {
+		background: none;
+		border: none;
+		padding: .4rem 1rem;
+		font-family: "Roboto", sans-serif;
+	}
+	.accordion .card-header h2 span {
+		float: left;
+		margin-top: 10px;
+	}
+	.accordion .card-header .btn {
+		color: #2f2f31;
+		font-size: 1.04rem;
+		text-align: left;
+		position: relative;
+		font-weight: 500;
+		padding-left: 2rem;
+	}
+	.accordion .card-header i {
+		font-size: 1.2rem;
+		font-weight: bold;
+		position: absolute;
+		left: 0;
+		top: 9px;
+	}
+	.accordion .card-header .btn:hover {
+		color: #ff8300;
+	}
+	.accordion .card-body {
+		color: #324353;
+		padding: 0.5rem 3rem;
+	}
+	.page-title {
+		margin: 3rem 0 3rem 1rem;
+		font-family: "Roboto", sans-serif;
+		position: relative;
+	}
+	.page-title::after {
+		content: "";
+		width: 80px;
+		position: absolute;
+		height: 3px;
+		border-radius: 1px;
+		background: #73bb2b;
+		left: 0;
+		bottom: -15px;
+	}
+	.accordion .highlight .btn {
+		color: #74bd30;
+	}
+	.accordion .highlight i {
+		transform: rotate(180deg);
+	}
+</style>
+<script>
+	$(document).ready(function(){
+		// Add minus icon for collapse element which is open by default
+		$(".collapse.show").each(function(){
+			$(this).prev(".card-header").addClass("highlight");
+		});
+		
+		// Highlight open collapsed element 
+		$(".card-header .btn").click(function(){
+			$(".card-header").not($(this).parents()).removeClass("highlight");
+			$(this).parents(".card-header").toggleClass("highlight");
+		});
+	});
+</script>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<h1 class="page-title">General FAQs</h1>
+			<div class="accordion" id="accordionExample">
+				<div class="card">
+					<div class="card-header" id="headingOne">
+						<h2 class="clearfix mb-0">
+							<a class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fa fa-chevron-circle-down"></i> Why do you need a different website if the main organization already has one?</a>									
+						</h2>
+					</div>
+					<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+						<div class="card-body">With the shortening lunch and school schedule, members are asked to follow this website for updates,
+along with email, Instagram, and any shared documents. Having a website for our state branch will keep
+all files related to North Carolina state documented in one place. Also, it serves as a portfolio for
+prospective partners, along with newsletters specifically catered towards our activities. It does not
+replace the main website, as the main website is also embedded into our state branch’s website.</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header" id="headingTwo">
+						<h2 class="mb-0">
+							<a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="fa fa-chevron-circle-down"></i> Is your branch religious?</a>
+						</h2>
+					</div>
+					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+						<div class="card-body">For clarification, though our branch partners with communities founded upon Christian principles, any contributions to our cause will not be used directly for any religion. Our main goal is to support our mission of supporting children emotionally.</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header" id="headingThree">
+						<h2 class="mb-0">
+							<a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="fa fa-chevron-circle-down"></i> Where does your money come from and what is it for?</a>                     
+						</h2>
+					</div>
+					<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+						<div class="card-body">Our donation is mostly from members for materials and fees to deliver the letters. Some of it is also
+covered by a stipend from our Vietnamese organization in Raleigh for excellence of service. We are
+allowed for a small grant from the main organization (all donations are tax-deductible at Global Giving),
+but we will request it once we run out of money.</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header" id="headingFour">
+						<h2 class="mb-0">
+							<a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><i class="fa fa-chevron-circle-down"></i> Where do you send cards?</a>                               
+						</h2>
+					</div>
+					<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+						<div class="card-body">We send cards to partnered organizations and our head organization in Maryland for letter distribution.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>          
 <!-- Begin Mailchimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
